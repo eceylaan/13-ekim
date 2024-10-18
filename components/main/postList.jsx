@@ -22,18 +22,19 @@ export default function PostList() {
   }
   return (
     <div>
-      <ul>
+      <div className="posts">
         {posts &&
           posts.map((post) => (
-            <li
+            <div
+              className="postBox"
               onClick={() => {
                 setSelectedPost(post);
               }}
             >
               {post.content}
-            </li>
+            </div>
           ))}
-      </ul>
+      </div>
       {selectedPost && (
         <div>
           <dialog open={selectedPost ? true : false}>

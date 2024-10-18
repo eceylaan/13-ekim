@@ -15,7 +15,7 @@ export default async function PostDetailPage({ params }) {
         {commentData.length !== 0
           ? commentData.map((comment) => {
               return (
-                <div key={comment.id}>
+                <div className="commentBox" key={comment.id}>
                   <p>{comment.content}</p>
                 </div>
               );

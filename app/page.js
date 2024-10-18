@@ -1,6 +1,10 @@
-import { login, signup } from "./actions";
+"use client";
+import { useState } from "react";
+import { login, signup } from "./login/actions";
 
-export default function LoginPage() {
+export default function page() {
+  const [modal, setModal] = useState(false);
+
   return (
     <div className="loginPage">
       <div>
@@ -11,7 +15,25 @@ export default function LoginPage() {
             <p>Membership</p>
             <p>Write</p>
             <p>Sign-in</p>
-            <button>Get Started</button>
+            <button onClick={() => setModal(true)}>Get Started</button>
+            {modal ? (
+              <div className="getStartedPopUp">
+                <dialog open={modal}>
+                  <div>
+                    <form>
+                      <label htmlFor="email">Email:</label>
+                      <input id="email" name="email" type="email" required />
+                      <label htmlFor="password">Password:</label>
+                      <input id="password" name="password" type="password" required />
+                      <button formAction={login}>Log in</button>
+                      <button formAction={signup}>Sign up</button>
+                    </form>
+                  </div>
+                </dialog>
+              </div>
+            ) : (
+              ""
+            )}
           </div>
         </nav>
       </div>
@@ -46,14 +68,6 @@ export default function LoginPage() {
           <p>Text to speech</p>
           <p>Teams</p>
         </div>
-        <form>
-          <label htmlFor="email">Email:</label>
-          <input id="email" name="email" type="email" required />
-          <label htmlFor="password">Password:</label>
-          <input id="password" name="password" type="password" required />
-          <button formAction={login}>Log in</button>
-          <button formAction={signup}>Sign up</button>
-        </form>
       </div>
     </div>
   );

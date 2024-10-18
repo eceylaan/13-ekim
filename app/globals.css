@@ -168,6 +168,7 @@ a {
   padding-inline: 38px;
   font-size: 22px;
   margin-top: 10px;
+  cursor: pointer;
 }
 .loginPageFooter {
   display: flex;
@@ -177,4 +178,56 @@ a {
   margin-top: 20px;
   justify-content: center;
   margin-bottom: 10px;
+  p {
+    cursor: pointer;
+  }
+}
+
+.getStartedPopUp {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 300px;
+  height: 100px;
+  background-color: white;
+  color: black;
+  position: fixed;
+}
+
+.userMainPageFlex {
+  display: flex;
+  padding-inline: 40px;
+  gap: 50px;
+}
+
+.borderRight {
+  border-right: 1px solid black;
+}
+
+.userMainPageNav {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+  color: grey;
+}
+
+.userMainPageNav p:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.commentBox {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding-block: 10px;
+}
+
+.posts {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.postBox {
+  border-bottom: 1px solid rgb(238, 231, 231);
 }

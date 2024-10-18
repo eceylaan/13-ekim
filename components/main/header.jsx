@@ -4,6 +4,7 @@ import { signOut } from "@/app/login/actions";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBell } from "@fortawesome/free-regular-svg-icons";
 import { faPenToSquare } from "@fortawesome/free-regular-svg-icons";
+import PostList from "./postList";
 
 export default async function MainHeader() {
   const supabase = createClient();
@@ -31,14 +32,12 @@ export default async function MainHeader() {
       </div>
 
       {user ? (
-        <ul>
-          <li> Hoşgeldin {user.email} </li>
-          <li>
-            <form action={signOut}>
-              <button>Çıkış yap</button>
-            </form>
-          </li>
-        </ul>
+        <div>
+          Hoşgeldin {user.email}
+          <form action={signOut}>
+            <button>Çıkış yap</button>
+          </form>
+        </div>
       ) : (
         <ul>
           <Link href={"/login"}> Giriş yap </Link>

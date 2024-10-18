@@ -1,4 +1,4 @@
-import PostList from "@/components/main/postList";
+import PostList from "@/components/main/PostList";
 
 export default async function Posts() {
   return (

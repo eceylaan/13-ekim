@@ -2,7 +2,7 @@
 
 import { createClient } from "@/utils/supabase/client";
 import { useEffect, useState } from "react";
-import AddComment from "./addComment";
+import AddComment from "./AddComment";
 
 export default function PostList() {
   const supabase = createClient();

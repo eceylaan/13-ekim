@@ -1,4 +1,3 @@
-import MainHeader from "@/components/main/Header";
 import PostList from "@/components/main/PostList";
 
 export default async function home() {

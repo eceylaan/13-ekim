@@ -1,9 +1,9 @@
-import MainHeader from "@/components/main/Header";
+import Header from "@/components/main/Header";
 
 export default function MainLayout({ children }) {
   return (
     <div>
-      <MainHeader />
+      <Header />
       {children}
     </div>
   );

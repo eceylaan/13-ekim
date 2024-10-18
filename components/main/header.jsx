@@ -6,7 +6,7 @@ import { faBell } from "@fortawesome/free-regular-svg-icons";
 import { faPenToSquare } from "@fortawesome/free-regular-svg-icons";
 import PostList from "./PostList";
 
-export default async function MainHeader() {
+export default async function Header() {
   const supabase = createClient();
   const {
     data: { user },

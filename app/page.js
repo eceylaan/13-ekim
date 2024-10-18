@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { login, signup } from "./login/actions";
 
-export default function page() {
+export default function Page() {
   const [modal, setModal] = useState(false);
 
   return (

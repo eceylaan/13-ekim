@@ -1,4 +1,4 @@
-import AddComment from "@/components/main/AddComment";
+import AddComment from "@/components/main/addComment";
 import { createClient } from "@/utils/supabase/server";
 import { notFound } from "next/navigation";
 

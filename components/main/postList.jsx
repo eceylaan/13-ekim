@@ -26,6 +26,7 @@ export default function PostList() {
         {posts &&
           posts.map((post) => (
             <div
+              key={post.id}
               className="postBox"
               onClick={() => {
                 setSelectedPost(post);

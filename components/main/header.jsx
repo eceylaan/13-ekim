@@ -4,7 +4,6 @@ import { signOut } from "@/app/login/actions";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBell } from "@fortawesome/free-regular-svg-icons";
 import { faPenToSquare } from "@fortawesome/free-regular-svg-icons";
-import PostList from "./PostList";
 
 export default async function Header() {
   const supabase = createClient();
